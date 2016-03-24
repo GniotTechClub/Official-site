@@ -22,12 +22,12 @@ if(!isset($_SESSION['hasVisited'])){
 }
 $counterVal = str_pad($counterVal, 5, "0", STR_PAD_LEFT);
 $chars = preg_split('//', $counterVal);
-$im = imagecreatefrompng("canvas.png");
-$src1 = imagecreatefrompng("$chars[1].png");
-$src2 = imagecreatefrompng("$chars[2].png");
-$src3 = imagecreatefrompng("$chars[3].png");
-$src4 = imagecreatefrompng("$chars[4].png");
-$src5 = imagecreatefrompng("$chars[5].png");
+$im = imagecreatefrompng("img/canvas.png");
+$src1 = imagecreatefrompng("img/$chars[1].png");
+$src2 = imagecreatefrompng("img/$chars[2].png");
+$src3 = imagecreatefrompng("img/$chars[3].png");
+$src4 = imagecreatefrompng("img/$chars[4].png");
+$src5 = imagecreatefrompng("img/$chars[5].png");
 imagecopymerge($im, $src1, 0, 0, 0, 0, 56, 75, 100);
 imagecopymerge($im, $src2, 60, 0, 0, 0, 56, 75, 100);
 imagecopymerge($im, $src3, 120, 0, 0, 0, 56, 75, 100);
